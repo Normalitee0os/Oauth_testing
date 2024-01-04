@@ -1,0 +1,32 @@
+<html>
+  <body>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div id="g_id_onload"
+      data-client_id="PUT_CLIENT_ID_HERE"
+      data-callback="handleCredentialResponse">
+ </div>
+ <script>
+   function handleCredentialResponse(response) {
+      // decodeJwtResponse() is a custom function defined by you
+      // to decode the credential response.
+
+      console.log(response);
+   }
+ </script>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
+  </body>
+</html>
+
+An element with a g_id_signin class renders as a Sign In With Google button. 
+The button is customized by the parameters provided in the data attributes.
+
+To display a Sign In With Google button and Google One Tap on the same page,
+remove data-auto_prompt="false". This is recommended to reduce friction and
+improve sign-in rates.
